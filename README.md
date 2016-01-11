@@ -1,4 +1,6 @@
 #自定义控件-抽奖转盘
+![](http://i11.tietuku.com/950e7392e90def8e.gif)
+
 1. 这个自定义控件我们使用surfaceview实现，记得之前的卫星菜单控件使用viewgroup实现，这个为什么使用surfaceview实现呢，他俩之间有何不同呢？
 	
 	- surfaceview继承自view，但是view的绘制是在UI线程中进行的，而surfaceview是在子线程中进行绘制的，这就说明了surfaceview适合于频繁绘制的情况，抽奖转盘要不停的绘制来实现旋转效果，所以我们使用surfaceview。
