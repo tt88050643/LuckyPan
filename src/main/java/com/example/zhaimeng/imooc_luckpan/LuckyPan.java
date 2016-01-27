@@ -201,7 +201,7 @@ public class LuckyPan extends SurfaceView implements SurfaceHolder.Callback, Run
                 if (mSpeed < 0) {
                     mSpeed = 0;
                     isShouldEnd = false;//减到0不再减
-                    if(mOnFinishListener != null){
+                    if (mOnFinishListener != null) {
                         mOnFinishListener.onFinish();
                     }
                 }
@@ -239,7 +239,7 @@ public class LuckyPan extends SurfaceView implements SurfaceHolder.Callback, Run
         //mSpeed就是每次执行draw时转盘所转的角度量
         float v1 = (float) ((-1 + Math.sqrt(1 + 8 * targetFrom)) / 2);//计算起始边的起始速度
         float v2 = (float) ((-1 + Math.sqrt(1 + 8 * targetEnd)) / 2);//计算起始边的起始速度
-        mSpeed = v1 + Math.random()*(v2 - v1);
+        mSpeed = v1 + Math.random() * (v2 - v1);
         isShouldEnd = false;
     }
 
@@ -311,13 +311,13 @@ public class LuckyPan extends SurfaceView implements SurfaceHolder.Callback, Run
 
     }
 
-    public interface OnFinishLuckyPan{
+    public interface OnFinishLuckyPan {
         void onFinish();
     }
 
     private OnFinishLuckyPan mOnFinishListener;
 
-    public void setOnFinishListener(OnFinishLuckyPan onFinishLuckyPan){
+    public void setOnFinishListener(OnFinishLuckyPan onFinishLuckyPan) {
         this.mOnFinishListener = onFinishLuckyPan;
     }
 
